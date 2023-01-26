@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Vehicle {
 //Has_A_property
 	@Autowired
-	@Qualifier("eEngg")
+	@Qualifier("eEngg")//here we chose a perticular engine by given it the qualifier name
 	private Engine engine;
 	public Vehicle() {
 		System.out.println("vehicle:0-param constructor");
@@ -16,11 +16,14 @@ public class Vehicle {
 	}
 	public void move(String sourcePlace,String destPlace)
 	{
+		//Here we start the engine
 		engine.start();
-		System.out.println("journey start from:"+sourcePlace);
+		//then journey is beginning
+	
+		System.out.println("journey start from the:"+sourcePlace);
 		System.out.println("journey continue");
 		engine.stop();
-		System.out.println("Journey stop At:"+destPlace);
+		System.out.println("Journey stop At the:"+destPlace);
 		
 	}
 	
